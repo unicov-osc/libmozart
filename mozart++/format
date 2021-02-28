@@ -1,0 +1,55 @@
+// -*- C++ -*- forwarding header
+
+/**
+ * Mozart++ Template Library: String
+ * Licensed under Apache 2.0
+ * Copyright (C) 2020-2021 Chengdu Covariant Technologies Co., LTD.
+ * Website: https://covariant.cn/
+ * Github:  https://github.com/chengdu-zhirui/
+ */
+
+/**
+ * The Mozart++ String formatter placeholders.
+ * <p>
+ * The structure of the placeholder are described as:
+ * {<floating-points><output-format><alignment>}
+ * where:
+ *
+ * <p>
+ * <floating-points> must start with a dot(.), then followed
+ * by a number showing the precision of the formatted value.
+ * e.g. {.3}, {.17}, ...
+ *
+ * <p>
+ * <output-format> are one of the following characters:
+ *     d    -    The number will be formatted in dec.
+ *     o    -    The number will be formatted in oct.
+ *     x    -    The number will be formatted in hex.
+ *     e    -    The number will be formatted in scientific format.
+ * e.g. {x}, {o}, {e}
+ *
+ * <p>
+ * <alignment> must start with a colon(:), then followed by alignment
+ * settings in (-)?<number>(|<char>)? format. If the short dash(-) was
+ * specified, the alignment direction was set to left, otherwise right.
+ * The <number> is showing the minimal room of the formatted value.
+ * If the <char> was specified, the unfilled room will be formatted
+ * to <char>, otherwise the space char.
+ * e.g. {:100|=} means right aligned to width 100, fill the rest with '='
+ * e.g. {:-10} means left aligned to width 10, fill the rest with ' ' (space char)
+ *
+ * @see std::left
+ * @see std::right
+ * @see std::setprecision
+ * @see std::showbase
+ * @see std::dec
+ * @see std::hex
+ * @see std::hexfloat
+ * @see std::oct
+ * @see std::fixed
+ * @see std::scientific
+ * @see std::setw
+ * @see std::setfill
+ */
+
+#include "mpp_string/format.hpp"
